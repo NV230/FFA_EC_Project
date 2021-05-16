@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="em">
+    <head>
+    <!-- Bootstrap installed and linked to index.html !-->
+    <link type='text/css' rel='stylesheet' href='bootstrap-5.0.1-dist/css/bootstrap.css'>
+
+    <!-- CSS file linked to index.html !-->
+    <link href="style.css" type="text/css" rel="stylesheet">
+        
+    <meta charset="utf-8">
+    <title> Food For All </title>
+    <link rel="shortcut icon" type="image/jpg" href="images/Food_For_All_Logo.png"/>
+    
+    </head>
+    
+    <!-- Navbar !-->
+    <ul class="list-nav navbar-fixed-top">
+      <li><a href="#page5">Contact</a></li>
+      <li><a href="#page4">Donate</a></li>
+      <li><a href="#page3">Our Product</a></li>
+      <li><a href="#page2">About FFA</a></li>
+      <li><a href="#page1">Home</a></li>
+    </ul>
+    
+    <!-- Page 1 Content !-->
+    <div class = "page1" id="page1">
+        
+        <h1 class = "display-2"> Food For All
+        <br>
+        <br>
+        <p class = "display-5"> Nibodh Vallapureddy, Shahil Patel, & Kaushal Ramalingam
+        </p>
+        </h1>
+    </div>
+    
+    <!-- Page 2 Content !-->
+    <div class = "page2" id="page2">
+          <center>
+                
+            <div class = "row">
+                
+                <div class = "col">
+                    <h3 class = "display-3">About Food For All</h3>
+                    <br>
+                    <p class="display-6"> The Food For All program is an initiative that aims to tackle a global problem: hunger.  Across the  world almost 9% of the population goes hungry which equates to roughly 690 million people per day.  Numerous factors such as economic position or location are attributed to this alarming statisic.  Thankfully, due to the generous and life-saving services provided by food banks, people are able to get quality meals on their tables.  However, many of the needy cannot attain these foods due to them not knowing where their nearest foodbank is.  For the purposes of our project, we decided to use a UK-based API to help residents of the United Kingdom locate food.              
+                    </p>
+                    
+                    <p class="display-6"> The program itself is based on Java and uses the <a href="https://github.com/givefood/data">Give Food API</a> to attain information.  Currently, we are in the process of making our product more user-friendly (creation of an app), however it is still fully operational.  We believe that our product can immensely help individuals as it provides them with quick, accurate, and realtime results.    
+         
+                    </p>
+
+                    <br>
+                    
+                    <div class = "row">
+                      <div class="col-sm-6">
+                      <img src="images/foodpic2.jpg" alt="Food Pick1" style="width:300px;height:300px;position:relative;top:-10px;">
+                      </div>
+
+                      <div class="col-sm-6">
+                      <img src="images/foodpic1.jpg" alt="Food Pick1" style="width:300px;height:300px;position:relative;top:-10px;">
+                      </div>
+
+                </div>
+                
+              </div>
+      </div>
+  </div>
+    
+        
+    <!-- Page 3 Content !-->
+    <div class = "page3" id = "page3">
+        
+        <center>
+          <div class = "row">
+              
+              <div class = "col-sm-6">
+              
+              <h3 class = "display-4">
+              <a href="https://github.com/givefood/data">Our Product</a>
+              </h3> 
+
+              <br>
+               <p class="display-6"> The FFA food locator (link above) is a Java-based application that allows people to look for foodbanks in the United Kingdom.  The program entails concepts that we learned in AP Computer Science Applications such as Java and the Sinbad library.  The Sinbad library was introduced to our group quite recently and we really enjoy its simplicity in extracting data from datasets.  As a result, we wanted to incorporate elements of this dataset into our project and build something that would solve a problem.  Though the product currently is strictly limited to the United Kingdom, it just shows how useful our product can be when give more references.  Currently, our product is fully operational but we plan on making it more user-friendly (through the creation of an app).  To the right you can see our product demonstration and you can download it <a href= "google.com">here</a>                   
+              </p>
+
+              </div>
+
+              <div class = "col-sm-6">
+              <h3 class = "display-4">Showcase</h3>
+              <br>
+              <img src="images/foodpic2.jpg" alt="Food Pick1" style="width:300px;height:300px;">
+              <br>
+              <br>
+              <div class = "col-sm-6">
+              <img src="images/foodpic2.jpg" alt="Food Pick1" style="width:300px;height:300px;">
+              </div> 
+              </div>
+              
+
+
+          </div>
+
+        </center>
+    
+    </div>
+    
+<!-- Page 4 Content !-->
+<div class="page4" id="page4">
+
+
+
+  <br>
+  <br>
+  <br>
+    
+  <center>
+    <div class="row">
+
+
+        <p class="display-4">
+          Select A Food Bank
+        </p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        <p class="display-6">
+
+          <select name="name" id="namedropdown">
+              
+              <option value="id1">Open Heart Kitchen</option>
+              <option value="id2">New Life Christian Church Food Pantry </option>
+              <option value="id3">South Hayward Parish </option>
+              <option value="id4">Community of Grace </option>
+              <option value="id5">Tri-City Volunteers </option>
+              <option value="id6">San Leandro Community Food Pantry </option>
+              <option value="id7">All Saints Episcopal Church </option>
+              <option value="id8">Davis Street Community Center </option>
+              <option value="id9">Feed My Sheep </option>
+
+          </select>
+          
+          <br>
+          <br> 
+
+            <button type="button" onclick="getdata();">Needs</button>
+          
+          <br>
+          <br>
+
+            <p>Name: <strong id="name"></strong></p>
+            <p>Item: <strong id="item"></strong></p>
+            <p>Location: <strong id="location"></strong></p>
+
+          </div>
+
+
+
+        </p>
+      </center>
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase.js"></script>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+
+
+
+
+
+    <!-- Page 5 Content !-->
+    
+    <div class = "page5" id = "page5">
+
+        <center>
+
+        <h3 class = "display-4">Contact Us</h3>
+      
+        <form>
+
+        <input name="name" type="text" class="feedback-input" placeholder="Name"/>   
+        <input name="email" type="text" class="feedback-input" placeholder="Email"/>
+        <textarea name="text" class="feedback-input"placeholder="Comment"></textarea>
+        <input type="submit" value="SUBMIT"/>
+
+        </form>
+
+        </center>
+
+    </div>  
+    
+    
+
+</body>
+</html>
